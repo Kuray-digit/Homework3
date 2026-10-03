@@ -9,7 +9,7 @@ namespace Exercise
             int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
             string[] monthsNames = { "Январь", "Февраль", "Март", "Апрель",
                 "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
-            int usersNumber = int.Parse(Console.ReadLine());
+            int usersNumber = int.Parse(Console.ReadLine() ?? "");
             int currCount = 0;
             foreach (int day in monthDays)
             {
