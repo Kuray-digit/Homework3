@@ -10,6 +10,9 @@ namespace Exercise
             string[] monthsNames = { "Январь", "Февраль", "Март", "Апрель",
                 "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
             int usersNumber = int.Parse(Console.ReadLine() ?? "");
+            if (usersNumber < 1 || usersNumber > 365)
+                Console.WriteLine("Невалидный вид ввода");
+                return;
             int currCount = 0;
             foreach (int day in monthDays)
             {
