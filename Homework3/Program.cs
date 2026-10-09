@@ -6,17 +6,31 @@ namespace Exercise
     {
         public static void Main(string[] args)
         {
-            string[] stringNumbers = (Console.ReadLine() ?? "").Split();
-            int lastNumber = int.Parse(stringNumbers[0]);
-            for (int i = 1; i < stringNumbers.Length; i++) 
+            string mainString = (Console.ReadLine() ?? "").ToLower();
+            switch (mainString)
             {
-                if (lastNumber > int.Parse(stringNumbers[i]))
-                {
-                    Console.WriteLine(i);
+                case "jabroni":
+                    Console.WriteLine("Patron Tequilla");
                     break;
-                }
+                case "school counselor":
+                    Console.WriteLine("Anithing with Alcohol");
+                    break;
+                case "programmer":
+                    Console.WriteLine("Hipster Craft Beer");
+                    break;
+                case "bike gang member":
+                    Console.WriteLine("Moonshine");
+                    break;
+                case "politician":
+                    Console.WriteLine("Your tax dollars");
+                    break;
+                case "Rapper":
+                    Console.WriteLine("Cristal");
+                    break;
+                default:
+                    Console.WriteLine("Beer");
+                    break;
             }
-
         }
     }
 }
