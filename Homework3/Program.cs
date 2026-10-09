@@ -4,20 +4,15 @@ namespace Exercise
 {
     class Program
     {
-        enum DaysOfWeek
-        {
-            Понедельник,
-            Вторник,
-            Среда,
-            Четверг,
-            Пятница,
-            Суббота,
-            Воскресенье
-        }
         public static void Main(string[] args)
         {
-            int indexDay = int.Parse(Console.ReadLine() ?? "") - 1;
-            Console.WriteLine((DaysOfWeek)indexDay);
+            string[] mainString = { "Hello Kitty", "Something global", "Barbie doll" };
+            int count = 0;
+            foreach (string str in mainString)
+            {
+                if (str == "Hello Kitty" || str == "Barbie doll") count++;
+            }
+            Console.WriteLine(count);
         }
     }
 }
