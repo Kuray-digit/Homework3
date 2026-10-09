@@ -10,7 +10,27 @@ namespace Exercise
             string[] monthsNames = { "Январь", "Февраль", "Март", "Апрель",
                 "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
             int usersNumber = int.Parse(Console.ReadLine() ?? "");
-            if (usersNumber < 1 || usersNumber > 365)
+            int currentYear = int.Parse(Console.ReadLine() ?? "");
+            int globalDays = 365;
+            if (currentYear % 4 == 0)
+            {
+                if (currentYear % 400 == 0)
+                {
+                    monthDays[1] += 1;
+                    globalDays += 1;
+                }
+                else if (currentYear % 100 == 0)
+                { 
+                }
+
+                else
+                {
+                    monthDays[1] += 1;
+                    globalDays += 1;
+                }
+
+            }
+            if (usersNumber < 1 || usersNumber > globalDays)
             {
                 Console.WriteLine("Невалидный вид ввода");
                 return;
